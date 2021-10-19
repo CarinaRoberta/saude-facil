@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import "./App.css";
+import SideBar from "./components/SideBar";
+import { Header } from "./components/SideBar/style";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
-function App() {
+const App: React.FC = () => {
+  const [showNav, setShowNav] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header>
+          <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
+        </Header>
+        <SideBar children={showNav} />
+        <div className="main">
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/perfil" exact={true} component={Profile} />
+        </div>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
