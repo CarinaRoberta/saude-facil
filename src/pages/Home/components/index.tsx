@@ -10,6 +10,9 @@ const ToDoList: React.FC = () => {
     setModal(!modal);
   };
 
+const handleTask = () => {
+  
+};
 
   return (
     <div>
@@ -17,7 +20,8 @@ const ToDoList: React.FC = () => {
       <p>Adicione novos compromissos</p>
       <button onClick={toggle}>Criar compromisso</button>
       <div className="task-container"></div>
-      {modal && <ModalTask toggle={toggle} />}
+      {modal && <ModalTask toggle={toggle} handleSend={handleTask} />}
+      <div>{}</div>
     </div>
   );
 };

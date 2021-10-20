@@ -28,6 +28,7 @@ export const SideNav = styled.div`
   .active {
     left: 0;
     overflow: hidden;
+    z-index: 1;
   }
 
   .logo {
