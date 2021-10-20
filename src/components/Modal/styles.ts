@@ -77,3 +77,7 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const Test = styled.div`
+
+`;
