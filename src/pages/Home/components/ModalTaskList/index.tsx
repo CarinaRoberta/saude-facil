@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
-import ModalTask from "../../../components/Modal";
-import { Task, TaskContext } from "../../../context/TaskContext";
+import React, { useContext, useState } from "react";
+import ModalTask from "../../../../components/Modal";
+import { TaskContext } from "../../../../context/TaskContext";
 import { Container, ContentTask, TaskList } from "./style";
 
 const ToDoList: React.FC = () => {

@@ -17,7 +17,7 @@ const App: React.FC = () => {
         </Header>
         <SideBar children={showNav} />
         <div className="main">
-          <Route path="/" exact={true} component={Home} />
+          <Route path="/home" exact={true} component={Home} />
           <Route path="/perfil" exact={true} component={Profile} />
         </div>
       </Router>

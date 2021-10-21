@@ -5,7 +5,7 @@ export const Container = styled.section`
     font-size: 0.9em;
 
     & + h2 {
-      border-top: 1px solid black;
+      border-top: 1px solid #ccc;
     }
   }
 
@@ -48,3 +48,5 @@ export const Container = styled.section`
     border-top: 1px solid #ccc;
   }
 `;
+
+
