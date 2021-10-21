@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useState } from "react";
 
-type Task = {
+export type Task = {
   title: string;
   description: string;
 };
@@ -9,7 +9,7 @@ type TaskData = {
   title: string;
   description: string;
   handleSend: () => void;
-  tarefas: Task | null;
+  tarefas: Task[];
   handleChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleChangeTextArea: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
@@ -23,7 +23,7 @@ type TaskProvider = {
 export function TaskProvider(props: TaskProvider) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [tarefas, setTarefas] = useState<Task | null>(null);
+  const [tarefas, setTarefas] = useState<Task[]>([]);
 
   function handleChangeInput(e: React.ChangeEvent<HTMLInputElement>): void {
     switch (e.target.id) {
@@ -50,8 +50,7 @@ export function TaskProvider(props: TaskProvider) {
       title: title,
       description: description,
     };
-    setTarefas(data);
-    console.log(tarefas);
+    setTarefas([...tarefas, data]);
   }
 
   return (

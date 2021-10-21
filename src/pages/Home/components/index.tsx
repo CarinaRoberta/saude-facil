@@ -1,6 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ModalTask from "../../../components/Modal";
-import { TaskContext } from "../../../context/TaskContext";
+import { Task, TaskContext } from "../../../context/TaskContext";
+import { Container, ContentTask, TaskList } from "./style";
 
 const ToDoList: React.FC = () => {
   const [modal, setModal] = useState(false);
@@ -10,17 +11,23 @@ const ToDoList: React.FC = () => {
     setModal(!modal);
   };
 
-  const handleTask = () => {};
-
   return (
-    <div>
-      <h3>Seus compromissos</h3>
+    <Container>
       <p>Adicione novos compromissos</p>
       <button onClick={toggle}>Criar compromisso</button>
       <div className="task-container"></div>
-      {modal && <ModalTask toggle={toggle} handleSend={handleTask} />}
-      <div>{tarefas?.title}</div>
-    </div>
+      {modal && <ModalTask toggle={toggle} />}
+      <TaskList>
+        {tarefas.map((task) => {
+          return (
+            <ContentTask>
+              <h3>{task.title}</h3>
+              <p>{task.description}</p>
+            </ContentTask>
+          );
+        })}
+      </TaskList>
+    </Container>
   );
 };
 
