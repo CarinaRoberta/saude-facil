@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import ModalTask, { Tasks } from "../../../components/Modal";
-
+import React, { useContext, useState } from "react";
+import ModalTask from "../../../components/Modal";
+import { TaskContext } from "../../../context/TaskContext";
 
 const ToDoList: React.FC = () => {
   const [modal, setModal] = useState(false);
-  const [taskList, setTaskList] = useState([]);
+  const { tarefas } = useContext(TaskContext);
 
   const toggle = () => {
     setModal(!modal);
   };
 
-const handleTask = () => {
-  
-};
+  const handleTask = () => {};
 
   return (
     <div>
@@ -21,7 +19,7 @@ const handleTask = () => {
       <button onClick={toggle}>Criar compromisso</button>
       <div className="task-container"></div>
       {modal && <ModalTask toggle={toggle} handleSend={handleTask} />}
-      <div>{}</div>
+      <div>{tarefas?.title}</div>
     </div>
   );
 };

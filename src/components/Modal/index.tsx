@@ -1,10 +1,6 @@
-import React, { useState, FormEvent } from "react";
+import React, { useContext } from "react";
+import { TaskContext } from "../../context/TaskContext";
 import { Container, Content, Test } from "./styles";
-
-export interface Tasks {
-  name: string;
-  description: string;
-}
 
 interface ModalProps {
   modal?: boolean;
@@ -12,19 +8,9 @@ interface ModalProps {
   handleSend(): void;
 }
 
-const ModalTask: React.FC<ModalProps> = ({ modal, toggle, handleSend }) => {
-  const [task, setTask] = useState("");
-  const [description, setDescription] = useState("");
-  const [tarefas, setTarefas] = useState<Tasks[]>([]);
-
-  /*const handleSend = () => {
-    setTask(task);
-    setDescription(description);
-    const data: Tasks = {
-      name: task,
-      description: description,
-    };
-  };*/
+const ModalTask: React.FC<ModalProps> = ({ modal, toggle }) => {
+  const { handleSend, handleChangeInput, handleChangeTextArea } =
+    useContext(TaskContext);
 
   return (
     <>
@@ -33,15 +19,15 @@ const ModalTask: React.FC<ModalProps> = ({ modal, toggle, handleSend }) => {
           <form>
             <h1>Adicione um compromisso</h1>
             <h3>Nome do compromisso</h3>
-            <input id="name" onChange={(e) => setTask(e.target.value)}></input>
+            <input id="title" onChange={handleChangeInput}></input>
             <h3>Descrição</h3>
             <textarea
               id="description"
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={handleChangeTextArea}
             ></textarea>
           </form>
           <div className="buttons">
-            <button onClick={handleSend} type="submit">
+            <button type="submit" onClick={handleSend}>
               Adicionar
             </button>
             <button onClick={toggle}>Cancelar</button>
