@@ -1,15 +1,14 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../../context/TaskContext";
-import { Container, Content, Test } from "./styles";
+import { Container, Content } from "./styles";
 
 interface ModalProps {
   modal?: boolean;
   toggle(): void;
-  handleSend(): void;
 }
 
 const ModalTask: React.FC<ModalProps> = ({ modal, toggle }) => {
-  const { handleSend, handleChangeInput, handleChangeTextArea } =
+  const { handleSend, handleChangeInput, handleChangeTextArea} =
     useContext(TaskContext);
 
   return (
