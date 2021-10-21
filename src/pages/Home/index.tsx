@@ -3,7 +3,8 @@ import { Container } from "./style";
 import { GiMedicines, GiMicroscope } from "react-icons/gi";
 import { GrEmergency } from "react-icons/gr";
 import { FaNotesMedical } from "react-icons/fa";
-import ToDoList from "./components";
+import ToDoList from "./components/ModalTaskList";
+import MedicineSection from "./components/MedicineSection";
 
 const Home: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </a>
-        <a href="/">
+        <a href="#medicine">
           <div className="categories">
             <div className="categories-item">
               <GiMedicines />
@@ -49,6 +50,9 @@ const Home: React.FC = () => {
         <h2>Seus compromissos</h2>
         <ToDoList />
       </div>
+      <a id="#medicine">
+        <MedicineSection />
+      </a>
     </Container>
   );
 };
