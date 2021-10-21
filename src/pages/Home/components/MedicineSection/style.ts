@@ -1,15 +1,26 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
   h2 {
     border-top: 1px solid #ccc;
-    padding-top: 20px;
   }
 
   p {
     font-size: 0.7em;
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+      margin: 0;
+    }
   }
 
   form {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
     input {
       width: 150px;
       height: 30px;
@@ -17,24 +28,13 @@ export const Container = styled.div`
       font-size: 0.5em;
       outline-color: var(--green-light);
       margin-right: 20px;
+      margin-top: 10px;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 0.4em;
-    }
 
-    button {
-      border: none;
-      width: 150px;
-      height: 40px;
-      font-size: 0.45em;
-      font-weight: bold;
-      border-radius: 6px;
-      color: var(--white);
-      background: var(--green-medium);
-      cursor: pointer;
-
-      &:hover {
-        filter: brightness(0.9);
+      @media screen and (max-width: 768px) {
+        margin: 5px 20px;
       }
     }
   }
@@ -48,6 +48,9 @@ export const MedicineList = styled.div`
   max-width: 800px;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 
   .medicine-time {
     width: 120px;

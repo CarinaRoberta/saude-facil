@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Button from "../../../../components/Button";
 import ModalTask from "../../../../components/Modal";
 import { TaskContext } from "../../../../context/TaskContext";
 import { Container, ContentTask, TaskList } from "./style";
@@ -14,7 +15,7 @@ const ToDoList: React.FC = () => {
   return (
     <Container>
       <p>Adicione novos compromissos</p>
-      <button onClick={toggle}>Criar compromisso</button>
+      <Button onClick={toggle}>Criar compromisso</Button>
       <div className="task-container"></div>
       {modal && <ModalTask toggle={toggle} />}
       <TaskList>

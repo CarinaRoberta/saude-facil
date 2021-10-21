@@ -4,21 +4,10 @@ export const Container = styled.div`
   p {
     font-size: 0.7em;
     margin: 0;
-  }
 
-  button {
-    border: none;
-    width: 150px;
-    height: 40px;
-    font-size: 0.45em;
-    font-weight: bold;
-    border-radius: 6px;
-    color: var(--white);
-    background: var(--green-medium);
-    cursor: pointer;
-
-    &:hover {
-      filter: brightness(0.9);
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+      margin: 0;
     }
   }
 `;
@@ -30,6 +19,9 @@ export const TaskList = styled.div`
   margin-top: 20px;
   max-width: 800px;
   flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 export const ContentTask = styled.div`
