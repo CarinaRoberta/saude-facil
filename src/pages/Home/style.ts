@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  h1 {
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+      margin: 0;
+    }
+  }
   h2 {
     font-size: 0.9em;
+
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+      margin: 0;
+    }
 
     & + h2 {
       border-top: 1px solid #ccc;
@@ -11,6 +22,12 @@ export const Container = styled.section`
 
   .categories-content {
     display: flex;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
   }
 
   .categories {
@@ -46,7 +63,12 @@ export const Container = styled.section`
   .appointment {
     margin-top: 30px;
     border-top: 1px solid #ccc;
+
+    h2 {
+      @media screen and (max-width: 768px) {
+        padding: 20px;
+        margin: 0;
+      }
+    }
   }
 `;
-
-

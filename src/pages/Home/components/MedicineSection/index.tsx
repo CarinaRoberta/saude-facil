@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { GiMedicines } from "react-icons/gi";
+import Button from "../../../../components/Button";
 import { Container, MedicineList } from "./style";
 
 interface MedicineTime {
@@ -60,7 +61,7 @@ const MedicineSection: React.FC = () => {
           type="time"
           placeholder="Horário de consumo"
         />
-        <button>Adicionar</button>
+        <Button>Adicionar</Button>
       </form>
       <MedicineList>
         {medicineTime.map((item) => {
