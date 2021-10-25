@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  max-width: 730px;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-size: 1.8em;
+
   h1 {
     @media screen and (max-width: 768px) {
       padding: 20px;
