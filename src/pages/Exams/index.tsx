@@ -85,14 +85,22 @@ const Exams: React.FC<Props> = ({ exam }) => {
                   ""
                 )}
                 <div className="notes">
-                  <p>
-                    <strong>INTERPRETAÇÃO: </strong>
-                    {examList?.interpretacao}
-                  </p>
-                  <p>
-                    <strong>NOTA: </strong>
-                    {examList?.nota}
-                  </p>
+                  {examList.interpretacao ? (
+                    <p>
+                      <strong>INTERPRETAÇÃO: </strong>
+                      {examList.interpretacao}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                  {examList.nota ? (
+                    <p>
+                      <strong>NOTA: </strong>
+                      {examList.nota}
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </ExamContainer>
             ))

@@ -46,14 +46,14 @@ const Home: React.FC = () => {
               </div>
             </div>
           </a>
-          <a href="/">
+          <Link to="/consultas  ">
             <div className="categories">
               <div className="categories-item">
                 <FaNotesMedical />
                 <p>Consultas</p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="appointment">
           <h2>Seus compromissos</h2>
