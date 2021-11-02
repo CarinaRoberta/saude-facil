@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Landing from "./pages/Landing";
 import SignUp from "./pages/Landing/SignUp";
+import Exams from "./pages/Exams";
 
 const App: React.FC = () => {
   const [showNav, setShowNav] = useState(false);
@@ -21,6 +22,7 @@ const App: React.FC = () => {
    <SideBar children={showNav} />*/}
         <Route path="/perfil" exact={true} component={Profile} />
         <Route path="/home" exact={true} component={Home} />
+        <Route path="/exames" exact={true} component={Exams} />
 
         <div className="main">
           <Route path="/" exact={true} component={Landing} />

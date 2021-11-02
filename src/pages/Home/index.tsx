@@ -7,6 +7,7 @@ import ToDoList from "./components/ModalTaskList";
 import MedicineSection from "./components/MedicineSection";
 import { Header } from "../../components/SideBar/style";
 import SideBar from "../../components/SideBar";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [showNav, setShowNav] = useState(false);
@@ -21,14 +22,14 @@ const Home: React.FC = () => {
         <h2>O que deseja consultar?</h2>
 
         <div className="categories-content">
-          <a href="/">
+          <Link to="/exames">
             <div className="categories">
               <div className="categories-item">
                 <GiMicroscope />
                 <p>Exames</p>
               </div>
             </div>
-          </a>
+          </Link>
           <a href="/">
             <div className="categories">
               <div className="categories-item">
