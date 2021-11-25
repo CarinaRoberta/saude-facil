@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container } from "./style";
 import logoImage from "../../../assets/logo.jpg";
 import { Link } from "react-router-dom";
-import SignUp from "../SignUp";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");

@@ -20,6 +20,7 @@ type TaskProvider = {
   children: ReactNode;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export function TaskProvider(props: TaskProvider) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
