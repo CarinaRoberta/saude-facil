@@ -9,6 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  span {
+    font-size: 0.4em;
+  }
+
   img {
     width: 120px;
     height: 120px;
