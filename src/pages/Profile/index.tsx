@@ -44,6 +44,3 @@ const Profile: React.FC = () => {
 };
 
 export default Profile;
-function setShowNav(arg0: boolean): void {
-  throw new Error("Function not implemented.");
-}

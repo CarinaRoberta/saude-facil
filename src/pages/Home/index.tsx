@@ -59,9 +59,9 @@ const Home: React.FC = () => {
           <h2>Seus compromissos</h2>
           <ToDoList />
         </div>
-        <a id="#medicine">
+        <span id="#medicine">
           <MedicineSection />
-        </a>
+        </span>
       </Container>
     </>
   );

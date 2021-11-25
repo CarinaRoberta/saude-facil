@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import SideBar from "./components/SideBar";
-import { Header } from "./components/SideBar/style";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Landing from "./pages/Landing";
@@ -12,7 +9,6 @@ import Exams from "./pages/Exams";
 import ScheduledAppointment from "./pages/ScheduledAppointment";
 
 const App: React.FC = () => {
-  const [showNav, setShowNav] = useState(false);
 
   return (
     <>
