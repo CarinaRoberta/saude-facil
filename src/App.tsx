@@ -7,12 +7,14 @@ import Landing from "./pages/Landing";
 import SignUp from "./pages/Landing/SignUp";
 import Exams from "./pages/Exams";
 import ScheduledAppointment from "./pages/ScheduledAppointment";
+import { ToastComponent } from "./components/Toast/Toast";
+
 
 const App: React.FC = () => {
-
   return (
     <>
       <Router>
+        <ToastComponent />
         {/* <Header>
           <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
         </Header>
