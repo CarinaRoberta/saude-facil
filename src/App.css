@@ -13,6 +13,7 @@ body {
   --green-medium: #146252;
   --green-light: #27c4a5;
   --white: #f2f2f2;
+  --color-error: #de2443;
 }
 
 code {
@@ -28,4 +29,10 @@ a {
   display: flex;
   justify-content: center;
   font-size: 2em;
+}
+
+.container-toast {
+  position: absolute;
+  z-index: 9999999999999999;
+  top: 0;
 }
